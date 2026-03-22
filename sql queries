@@ -1,0 +1,79 @@
+--monthly revenue and growth
+with current_revenue as (
+select 
+ DATE_TRUNC('month',order_date) as month,
+ sum(quantity * selling_price) as revenue
+ from orders 
+ group by  DATE_TRUNC('month',order_date) 
+),
+prev_month_rev as (
+select 
+      revenue,
+	  month,
+lag(revenue) over(order by month) as prev_month_revenue	  
+from current_revenue
+group by month,revenue
+)
+
+select *,
+Round(revenue - prev_month_revenue / prev_month_revenue * 100) as MOM_GROWTH
+from prev_month_rev
+
+
+--LOSS ANALYSIS
+select 
+      p.product_name,
+sum(o.quantity - (o.selling_price - p.cost_price) - o.discount) as total_profit
+from products p 
+join orders o on o.product_id = p.product_id
+group by p.product_name
+having sum(o.quantity - (o.selling_price - p.cost_price) - o.discount) < 0
+order by total_profit
+
+
+--Top Products per Category
+select * 
+from (select     p.category,p.product_name,
+sum(o.quantity) as total_sales,
+RANK() OVER(partition by p.category order by sum(o.quantity) desc) as rnk 
+from orders o 
+join products p on p.product_id = o.product_id
+group by p.category,p.product_name
+) t
+where rnk = 1
+
+--which region drives the most revenue 
+
+select region,
+sum(quantity * selling_price) as revenue,
+Round ( sum(quantity * selling_price) * 100/
+  sum(sum(quantity * selling_price)) over() , 2) as contribution_pct
+ from orders
+ group by region 
+ order by contribution_pct desc
+
+
+--Delivery Delay Analysis
+select courier,
+count(*) as total_orders,
+Round(avg(delivery_date - ship_date) , 2) as avg_delivery_days 
+from shipments
+group by courier
+order by avg_delivery_days desc
+ 
+--valuable customers
+select customer_id,
+count(order_id) as total_orders,
+sum(quantity * selling_price) as total_spent,
+case  
+    when count(order_id) >= 5 then 'HIGH VALUE'
+	when count(order_id) >=3 then 'MEDIUM VALUE'
+	else 'LOW VALUE'
+	end as customer_segment
+from orders
+group by customer_id
+
+--
+
+from customers c
+join orders o on o.customer_id = c.customer_id
