@@ -88,6 +88,14 @@ This project demonstrates the ability to:
 
 ---
 
+- ##  What Makes This Project Unique
+- Simulates real-world MIS reporting workflow
+- Focuses on business insights, not just visualization
+- Uses multiple tools (Excel + SQL + Power BI)
+- Provides actionable recommendations
+
+---
+
 ##  Conclusion
 
 This project simulates a real MIS/Reporting Analyst role by combining data cleaning, analysis, dashboarding, and business insight generation.
