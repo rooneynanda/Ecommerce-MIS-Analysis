@@ -1,107 +1,145 @@
-#  E-Commerce MIS Analysis | Data Analyst Project
+# 🛒 E-Commerce MIS Analyst Project
 
-##  Objective
-To analyze e-commerce sales data and generate actionable business insights related to revenue, product performance, and regional trends. The goal is to simulate a real-world MIS reporting environment and support data-driven decision-making.
+## 📌 Business Problem
 
----
+This project analyzes an e-commerce business to identify key drivers of revenue, profitability, and customer behavior.
 
-##  Tools & Technologies
-- Excel (Advanced formulas, Pivot Tables, Power Query)
-- SQL (PostgreSQL – Joins, Aggregations, Window Functions)
-- Power BI (Data Modeling, DAX, Dashboarding)
+The objective is to answer critical business questions such as:
 
----
-
-##  Dataset Overview
-- Sales transactions dataset (7,000+ records)
-- Includes: Orders, Products, Revenue, Customers, Regions
+* Which products and categories drive the most revenue?
+* Where is the business losing profit?
+* Who are the most valuable customers?
+* How can the company improve performance using data?
 
 ---
 
-##  Project Workflow
+## 📊 Dataset Overview
 
-### 1. Data Cleaning & Preparation
-- Removed duplicates and handled missing values
-- Standardized data formats (dates, text, numerical values)
-- Used Power Query for transformation and automation
+The dataset simulates a real-world e-commerce business and includes:
 
----
+* **Orders Data** – Order ID, Date, Revenue, Profit
+* **Customers Data** – Customer ID, Region
+* **Products Data** – Category, Sub-category
+* **Returns Data** – Returned Orders
 
-### 2. Data Analysis
-- Analyzed revenue trends over time
-- Identified top-performing products and categories
-- Evaluated regional performance
-- Calculated KPIs such as total revenue, average order value
+Time Period: Multi-month transactional data
 
 ---
 
-### 3. Dashboard Development
-- Built interactive dashboards using Power BI
-- Implemented filters for dynamic analysis
-- Used DAX measures for KPI calculations
+## 🛠️ Tools & Technologies Used
+
+* **Excel**
+
+  * Data cleaning (removing duplicates, handling nulls)
+  * Formatting and structuring raw datasets
+
+* **SQL**
+
+  * Data extraction and transformation
+  * Aggregations (Revenue, Profit, Orders)
+  * Window functions for trend and ranking analysis
+
+* **Power BI**
+
+  * Interactive dashboard creation
+  * KPI tracking and visualization
+  * Business insights generation
 
 ---
 
-## Key Insights
+## 📈 Key Insights
 
-- Top 20% of products contributed ~65% of total revenue
-- Certain regions consistently underperformed in sales
-- Sales showed seasonal trends with peak periods
-  -High-value customers contributed significantly to revenue
+* 🔹 **Top 20% customers contribute ~70–80% of total revenue**
+  → Strong Pareto effect observed
 
----
+* 🔹 **High-revenue categories are not always high-profit**
+  → Some categories have heavy discounting leading to low margins
 
-##  Business Recommendations
+* 🔹 **Certain regions show high return rates**
+  → Indicates possible logistics or product quality issues
 
-- Focus marketing efforts on high-performing products
-- Improve strategy in underperforming regions
-- Leverage seasonal trends for inventory planning
-- Target high-value customers for retention and upselling
+* 🔹 **Monthly sales trends show seasonal spikes**
+  → Opportunities for targeted marketing campaigns
 
 ---
 
-##  Dashboard Preview
-<img width="1153" height="585" alt="Screenshot 2026-03-22 211213" src="https://github.com/user-attachments/assets/58579298-71f2-40ae-aa5c-767d60cee8f0" />
-<img width="1162" height="656" alt="Screenshot 2026-03-22 211200" src="https://github.com/user-attachments/assets/67062d2b-e6d8-4ce3-8b81-0199c905c150" />
-<img width="1169" height="657" alt="Screenshot 2026-03-22 211140" src="https://github.com/user-attachments/assets/2b6cdf26-0a03-4b1d-bff7-2e4380d88aa6" />
-<img width="1150" height="658" alt="Screenshot 2026-03-22 211113" src="https://github.com/user-attachments/assets/d3a46b5a-570e-4722-8909-2aedfb73a059" />
+## 💡 Business Recommendations
 
-
----
-
-##  SQL Analysis Highlights
-
-- Customer Lifetime Value (CLV) calculation
-- Revenue trends using window functions
-- Top customers ranking
-- Category-wise performance analysis
+* ✅ Focus marketing efforts on **high-value customers** to maximize ROI
+* ✅ Reduce discounts on **low-margin categories** to improve profitability
+* ✅ Investigate and fix **high return regions** to reduce losses
+* ✅ Leverage seasonal trends by increasing **inventory and ad spend during peak months**
 
 ---
 
-##  Business Impact
+## 📊 Dashboard Features (Power BI)
 
-This project demonstrates the ability to:
-- Perform end-to-end data analysis
-- Build business-focused dashboards
-- Translate data into actionable insights
-- Support decision-making through reporting
-
----
-
-- ##  What Makes This Project Unique
-- Simulates real-world MIS reporting workflow
-- Focuses on business insights, not just visualization
-- Uses multiple tools (Excel + SQL + Power BI)
-- Provides actionable recommendations
+* Revenue & Profit Overview
+* Sales by Category & Region
+* Customer Contribution Analysis
+* Monthly Trend Analysis
+* Return Rate Insights
 
 ---
 
-##  Conclusion
+## 🧠 Advanced Analysis Performed
 
-This project simulates a real MIS/Reporting Analyst role by combining data cleaning, analysis, dashboarding, and business insight generation.
+### Customer Segmentation (RFM Logic)
+
+Customers were segmented based on:
+
+* Purchase frequency
+* Revenue contribution
+
+This helps identify:
+
+* High-value customers
+* At-risk customers
+* Low-engagement customers
 
 ---
 
-##  Portfolio & Contact
-- LinkedIn: https://www.linkedin.com/in/rooney-n-ba040a3a3/
-- Email: rooneynanda7@gmail.com
+## 📁 Project Structure
+
+```
+Ecommerce-MIS-Analyst/
+│
+├── Dataset/
+│   ├── Orders.xlsx
+│   ├── Customers.xlsx
+│   └── Products.xlsx
+│
+├── SQL/
+│   ├── Data Cleaning.sql
+│   ├── Analysis Queries.sql
+│
+├── PowerBI/
+│   └── Dashboard.pbix
+│
+├── Screenshots/
+│   └── Dashboard.png
+│
+└── README.md
+```
+
+---
+
+## 📌 How This Project Adds Value 
+
+This project demonstrates:
+
+* ✔️ Data cleaning and preprocessing
+* ✔️ SQL-based data analysis
+* ✔️ Dashboard creation and KPI tracking
+* ✔️ Business insight generation
+* ✔️ Problem-solving using data
+
+---
+
+## 🎯 Conclusion
+
+This project goes beyond basic reporting and focuses on **business decision-making**.
+
+
+
+---
