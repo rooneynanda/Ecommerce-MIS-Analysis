@@ -1,145 +1,88 @@
-# 🛒 E-Commerce MIS Analyst Project
+#  Automated MIS Reporting System for Business Operations
 
-## 📌 Business Problem
+##  Overview
+This project simulates a real-world MIS (Management Information System) reporting setup used by companies to track business performance, profitability, and operational efficiency.
 
-This project analyzes an e-commerce business to identify key drivers of revenue, profitability, and customer behavior.
-
-The objective is to answer critical business questions such as:
-
-* Which products and categories drive the most revenue?
-* Where is the business losing profit?
-* Who are the most valuable customers?
-* How can the company improve performance using data?
+The goal was to transform raw transactional data into a structured reporting system that enables decision-making across sales, operations, and customer management.
 
 ---
 
-## 📊 Dataset Overview
-
-The dataset simulates a real-world e-commerce business and includes:
-
-* **Orders Data** – Order ID, Date, Revenue, Profit
-* **Customers Data** – Customer ID, Region
-* **Products Data** – Category, Sub-category
-* **Returns Data** – Returned Orders
-
-Time Period: Multi-month transactional data
+##  Business Problem
+Businesses often struggle with:
+- Lack of centralized reporting for revenue and profitability
+- Difficulty identifying loss-making products
+- Poor visibility into delivery performance and customer behavior
+- Manual and time-consuming reporting processes
 
 ---
 
-## 🛠️ Tools & Technologies Used
+##  Solution
+Built an end-to-end MIS reporting system using **SQL, Excel, and Power BI** to automate reporting and generate actionable insights.
 
-* **Excel**
-
-  * Data cleaning (removing duplicates, handling nulls)
-  * Formatting and structuring raw datasets
-
-* **SQL**
-
-  * Data extraction and transformation
-  * Aggregations (Revenue, Profit, Orders)
-  * Window functions for trend and ranking analysis
-
-* **Power BI**
-
-  * Interactive dashboard creation
-  * KPI tracking and visualization
-  * Business insights generation
+The system:
+- Cleans and structures raw data
+- Tracks key business KPIs
+- Identifies performance issues
+- Supports data-driven decision-making
 
 ---
 
-## 📈 Key Insights
-
-* 🔹 **Top 20% customers contribute ~70–80% of total revenue**
-  → Strong Pareto effect observed
-
-* 🔹 **High-revenue categories are not always high-profit**
-  → Some categories have heavy discounting leading to low margins
-
-* 🔹 **Certain regions show high return rates**
-  → Indicates possible logistics or product quality issues
-
-* 🔹 **Monthly sales trends show seasonal spikes**
-  → Opportunities for targeted marketing campaigns
+##  Tools & Technologies
+- **SQL (PostgreSQL):** Data extraction, joins, aggregations
+- **Excel:** Data cleaning, KPI calculations, dynamic analysis
+- **Power BI:** Interactive dashboard and visualization
 
 ---
 
-## 💡 Business Recommendations
+##  Workflow
 
-* ✅ Focus marketing efforts on **high-value customers** to maximize ROI
-* ✅ Reduce discounts on **low-margin categories** to improve profitability
-* ✅ Investigate and fix **high return regions** to reduce losses
-* ✅ Leverage seasonal trends by increasing **inventory and ad spend during peak months**
+1. **Data Extraction (SQL)**
+   - Queried and structured transactional data
+   - Performed joins and aggregations for analysis
 
----
+2. **Data Cleaning & Transformation (Excel)**
+   - Handled missing values and inconsistencies
+   - Standardized product categories and fields
+   - Created calculated columns (Profit, Delivery Days, Error Flags)
 
-## 📊 Dashboard Features (Power BI)
+3. **MIS Reporting System (Excel)**
+   - Built KPI tracking system:
+     - Total Revenue
+     - Total Profit
+     - Total Orders
+     - Avg Delivery Time
+   - Created dynamic analysis using formulas (SUMIFS, FILTER, IF)
+   - Enabled filtering by category, city, and time period
 
-* Revenue & Profit Overview
-* Sales by Category & Region
-* Customer Contribution Analysis
-* Monthly Trend Analysis
-* Return Rate Insights
-
----
-
-## 🧠 Advanced Analysis Performed
-
-### Customer Segmentation (RFM Logic)
-
-Customers were segmented based on:
-
-* Purchase frequency
-* Revenue contribution
-
-This helps identify:
-
-* High-value customers
-* At-risk customers
-* Low-engagement customers
+4. **Dashboard & Visualization (Power BI)**
+   - Designed interactive dashboard for business monitoring
+   - Visualized revenue trends, profitability, and customer behavior
 
 ---
 
-## 📁 Project Structure
+##  Key Insights
 
-```
-Ecommerce-MIS-Analyst/
-│
-├── Dataset/
-│   ├── Orders.xlsx
-│   ├── Customers.xlsx
-│   └── Products.xlsx
-│
-├── SQL/
-│   ├── Data Cleaning.sql
-│   ├── Analysis Queries.sql
-│
-├── PowerBI/
-│   └── Dashboard.pbix
-│
-├── Screenshots/
-│   └── Dashboard.png
-│
-└── README.md
-```
+- Identified **loss-making products** negatively impacting profitability  
+- Found **high discount impact** reducing overall margins  
+- Detected **delivery delays** affecting customer satisfaction  
+- Segmented customers into **new vs repeat**, highlighting retention patterns  
 
 ---
 
-## 📌 How This Project Adds Value 
+##  Business Impact
 
-This project demonstrates:
+This system enables:
+- Faster and automated reporting
+- Identification of revenue leakage areas
+- Improved operational efficiency
+- Better decision-making through data visibility
 
-* ✔️ Data cleaning and preprocessing
-* ✔️ SQL-based data analysis
-* ✔️ Dashboard creation and KPI tracking
-* ✔️ Business insight generation
-* ✔️ Problem-solving using data
 
----
-
-## 🎯 Conclusion
-
-This project goes beyond basic reporting and focuses on **business decision-making**.
+##  Project Links
+- GitHub Repository: https://github.com/rooneynanda/Ecommerce-MIS-Analysis
 
 
 
----
+
+##  Conclusion
+This project demonstrates the ability to build a real-world MIS reporting system that goes beyond analysis and focuses on solving business problems using data.
